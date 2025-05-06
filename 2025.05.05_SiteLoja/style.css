@@ -1,0 +1,86 @@
+/*=================== RESET GERAL ====================*/
+* {
+    margin: 0;
+    /* Remove margens padrão */
+    padding: 0;
+    /* Remove espaçamentos internos padrão */
+    box-sizing: border-box;
+    /* Inclui bordas e paddings dentro do "tamanho total" dos elementos */
+}
+
+/*=================== MENU DE NAVEGAÇÃO ====================*/
+.navbar {
+    font-size: 1rem;
+    /* Tamanho padrão da fonte do menu */
+}
+
+.nav-link {
+    color: var(--verde-escuro) !important;
+    /* Cor dos links */
+    font-weight: 500;
+    /* Negrito médio para destaque */
+    margin-left: 15px;
+    /* Espaçamento entre os itens do menu */
+}
+
+.nav-link:hover {
+    color: var(--verde-claro) !important;
+    /* Cor mais clara ao passar o mouse */
+}
+
+.cta-button:hover {
+    background-color: #3b6c56;
+    /* Cor alternativa ao passar o mouse */
+    color: white;
+    /* Texto branco mantido */
+}
+
+/*=================== ACERTO DE FONTE DOS TEXTOS ====================*/
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Fonte legível e moderna */
+    line-height: 1, 6;
+    /* Espaçamento entre linhas confortável */
+}
+
+/*=================== ACERTO DAS SOCTION ====================*/
+section {
+    padding: 3rem 1rem;
+    /* Espaçamento vertical e horizontal */
+    Font-size: 1.0rem;
+    /* Tamanho dos títulos */
+    margin-bottom: 1rem;
+    /* Espaço abaixo do título */
+}
+
+/*=================== IMAGEM DO BLOG ====================*/
+
+.logo-blog {
+    max-width: 160px;
+    /* Largura máxima do logo */
+    height: auto;
+    /* Altura proporcional */
+}
+
+/*=================== CENTRALIZAÇÃO DO CENTRO ====================*/
+
+.centroTexto{
+    text-align: center;
+}
+
+/*=================== CENTRALIZAÇÃO DO CENTRO ====================*/
+
+.centroBlog{
+    text-align: center;
+}
+
+
+/*=================== Imagens Produtos ====================*/
+.img-produtos {
+    max-width: 200px;
+    /* Largura máxima do logo */
+    height: auto;
+    /* Altura proporcional */
+}
+

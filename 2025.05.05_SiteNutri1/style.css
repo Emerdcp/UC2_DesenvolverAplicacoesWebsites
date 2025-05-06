@@ -1,0 +1,134 @@
+:root {
+  --lavanda: #f3e8ff;           /* Cor de fundo suave e acolhedora */
+  --verde-claro: #b2d9c4;       /* Cor principal para destaques leves */
+  --verde-escuro: #5a8d6d;      /* Cor para botões e títulos */
+  --cinza: #333;                /* Cor base para textos */
+  --branco: #ffffff;            /* Branco puro, usado em textos e botões */
+}
+
+/* RESET GERAL */
+* {
+  margin: 0;                    /* Remove margens padrão */
+  padding: 0;                   /* Remove espaçamentos internos padrão */
+  box-sizing: border-box;      /* Inclui bordas e paddings dentro do "tamanho total" dos elementos */
+}
+
+/* ESTILO BASE DO CORPO */
+body {
+  font-family: 'Segoe UI', sans-serif;   /* Fonte legível e moderna */
+  background-color: var(--lavanda);      /* Fundo lavanda claro */
+  color: var(--cinza);                   /* Texto em cinza escuro */
+  line-height: 1.6;                      /* Espaçamento entre linhas confortável */
+}
+
+/* LOGO DA PÁGINA */
+.logo-img {
+  max-width: 160px;              /* Largura máxima do logo */
+  height: auto;                  /* Altura proporcional */
+}
+
+/* MENU DE NAVEGAÇÃO */
+.navbar {
+  font-size: 1rem;               /* Tamanho padrão da fonte do menu */
+}
+
+.nav-link {
+  color: var(--verde-escuro) !important; /* Cor dos links */
+  font-weight: 500;             /* Negrito médio para destaque */
+  margin-left: 15px;           /* Espaçamento entre os itens do menu */
+}
+
+.nav-link:hover {
+  color: var(--verde-claro) !important; /* Cor mais clara ao passar o mouse */
+}
+
+/* SEÇÃO DE DESTAQUE (HERO) */
+.hero {
+  background-color: var(--verde-claro); /* Fundo verde claro */
+  padding: 3rem 1rem;                   /* Espaçamento interno vertical e horizontal */
+  color: var(--cinza);                 /* Texto escuro */
+}
+
+.hero h1 {
+  font-size: 2.2rem;                   /* Título principal grande */
+  font-weight: 600;                   /* Um pouco mais pesado */
+}
+
+.subtitulo {
+  font-size: 1.1rem;                  /* Texto auxiliar com tamanho médio */
+  margin-bottom: 1.5rem;              /* Espaço abaixo */
+  color: #555;                        /* Tom de cinza médio */
+}
+
+.hero h2 {
+  font-size: 1.5rem;                  /* Subtítulo */
+  margin-bottom: 1rem;               /* Espaço abaixo */
+}
+
+/* BOTÃO PRINCIPAL (CTA) */
+.cta-button {
+  display: inline-block;             /* Elemento em linha com comportamento de bloco */
+  background-color: var(--verde-escuro); /* Fundo escuro */
+  color: var(--branco);              /* Texto branco */
+  padding: 0.8rem 1.6rem;            /* Espaçamento interno (altura x largura) */
+  border-radius: 30px;               /* Bordas arredondadas estilo pílula */
+  text-decoration: none;            /* Remove sublinhado */
+  font-weight: bold;                /* Texto em negrito */
+  transition: 0.3s;                 /* Suaviza animação no hover */
+}
+
+.cta-button:hover {
+  background-color: #3b6c56;        /* Cor alternativa ao passar o mouse */
+  color: white;                     /* Texto branco mantido */
+}
+
+/* ESTILO DAS SEÇÕES */
+section {
+  padding: 3rem 1rem;               /* Espaçamento vertical e horizontal */
+}
+
+section h3 {
+  color: var(--verde-escuro);       /* Cor dos títulos das seções */
+  font-size: 1.8rem;                /* Tamanho dos títulos */
+  margin-bottom: 1rem;              /* Espaço abaixo do título */
+  font-weight: 600;                 /* Peso da fonte */
+}
+
+/* LISTA DE SERVIÇOS */
+.lista-servicos {
+  list-style: none;                /* Remove os marcadores padrão da lista */
+  padding-left: 0;                 /* Remove espaçamento da esquerda */
+  font-size: 1.1rem;               /* Tamanho da fonte dos itens */
+}
+
+.lista-servicos li {
+  margin-bottom: 0.5rem;          /* Espaçamento entre os itens */
+}
+
+/* RODAPÉ */
+footer {
+  background-color: var(--verde-escuro); /* Cor de fundo escura */
+  color: white;                          /* Texto branco */
+  text-align: center;                   /* Centraliza o conteúdo */
+  padding: 1rem;                        /* Espaço interno */
+  font-size: 0.9rem;                    /* Fonte um pouco menor */
+}
+
+/* RESPONSIVIDADE – Ajustes para telas pequenas */
+@media (max-width: 576px) {
+  .logo-img {
+      max-width: 120px;            /* Reduz logo em telas pequenas */
+  }
+
+  .hero h1 {
+      font-size: 1.7rem;           /* Reduz título principal */
+  }
+
+  .hero h2 {
+      font-size: 1.2rem;           /* Reduz subtítulo */
+  }
+
+  section h3 {
+      font-size: 1.5rem;           /* Reduz títulos das seções */
+  }
+}

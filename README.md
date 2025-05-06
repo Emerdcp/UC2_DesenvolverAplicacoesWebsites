@@ -1,3 +1,9 @@
+# Site para Programação
+
+https://cheatsheets.zip/index.html
+
+
+
 # Básico em HTML
 
 Em HTML, os comandos básicos são as "tags", que são marcadores que definem a estrutura e o conteúdo de uma página da web. As tags mais importantes para um iniciante incluem <html>, <head>, <body>, <title>, <p>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <img>, <a>, <ul>, <ol>, <li>, <div>, e <span>. 
