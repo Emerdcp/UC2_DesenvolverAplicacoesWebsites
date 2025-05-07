@@ -152,12 +152,45 @@
         <div class="container">
             <div class="row">
                 <h1 class="centroTexto">Contato</h1>
+                <form action="###########.php" method="POST" enctype="multipart/form-data">
+                    <div class="container">
+                        <h1>Entre em Contato</h1>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <label for="nome">Nome</label>
+                                <input type="text" placeholder="Nome" id="nome" class="form-control">
+                                <br>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label for="email">E-mail</label>
+                                <input type="email" placeholder="E-mail" id="email" class="form-control">
+                                <br>
+                            </div>            
+                            <div class="col-12 col-md-4">
+                                <label for="email">Telefone</label>
+                                <input type="tel" placeholder="Telefone" id="telefone" class="form-control">
+                                <br>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="observacao">Nós mande sua mensagem</label>
+                                <textarea name="observacao" id="observacao" rows="3" class="form-control"></textarea>
+                                <br>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="reset" class="btn btn-secondary">Cancelar</button>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 <hr>
     <footer>
-        <p>&copy; StreetWear - Todos os direitos reservados</p>
+        <p class="text-center">&copy; StreetWear - Todos os direitos reservados</p>
     </footer>
 
 
