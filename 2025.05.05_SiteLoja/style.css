@@ -10,38 +10,38 @@
 
 /*=================== MENU DE NAVEGAÇÃO ====================*/
 .navbar {
-    font-size: 1rem;
-    /* Tamanho padrão da fonte do menu */
+    font-size: 1rem; /* Tamanho padrão da fonte do menu */
 }
 
 .nav-link {
-    color: var(--verde-escuro) !important;
-    /* Cor dos links */
-    font-weight: 500;
-    /* Negrito médio para destaque */
-    margin-left: 15px;
-    /* Espaçamento entre os itens do menu */
+    color: #000000 !important; /* Cor dos links */
+    font-weight: 500; /* Negrito médio para destaque */
+    margin-left: 15px; /* Espaçamento entre os itens do menu */
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--verde-claro) !important;
-    /* Cor mais clara ao passar o mouse */
+    color: #7f7f7f; /* Cor mais clara ao passar o mouse */
+    font-weight: 700;
 }
 
 .cta-button:hover {
-    background-color: #3b6c56;
-    /* Cor alternativa ao passar o mouse */
-    color: white;
-    /* Texto branco mantido */
+    background-color: #0b0b0b; /* Cor alternativa ao passar o mouse */
+    color: white; /* Texto branco mantido */
 }
 
 /*=================== ACERTO DE FONTE DOS TEXTOS ====================*/
 
-.body {
-    font-family: Arial, Helvetica, sans-serif;
-    /* Fonte legível e moderna */
-    line-height: 1, 6;
-    /* Espaçamento entre linhas confortável */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Fonte legível e moderna */
+    line-height: 1.6; /* Espaçamento entre linhas confortável */
+    text-align: justify; /* Justifica o texto no corpo da página */
+    font-size: 1rem; /* Tamanho de fonte legível */
+    padding: 20px; /* Espaço nas bordas internas */
+    color: #333; /* Cor de texto mais suave que preto puro */
+    background-color: #f9f9f9; /* Fundo claro, mas não branco puro */
 }
 
 /*=================== ACERTO DAS SOCTION ====================*/
@@ -78,9 +78,69 @@ section {
 
 /*=================== Imagens Produtos ====================*/
 .img-produtos {
-    max-width: 200px;
-    /* Largura máxima do logo */
-    height: auto;
-    /* Altura proporcional */
+    max-width: 200px;    /* Largura máxima do logo */
+    height: auto;    /* Altura proporcional */
 }
 
+/*=================== Imagens Menu Logo ====================*/
+.logo-menu{
+    max-width: 80px;    /* Largura máxima do logo */
+    height: auto;    /* Altura proporcional */
+
+}
+
+/*=================== Rodapé do footer ====================*/
+footer{
+    background-color: #000; /* fundo preto */
+    color: #fff; /* texto branco */
+    padding: 20px; /* espaço interno opcional para visual mais bonito */
+    text-align: center; /* centraliza o texto */
+}
+
+footer img {
+    max-width: 35px; /* Largura máxima do logo */
+    height: auto; /* Altura proporcional */
+}
+
+/*=================== SLAIDES ====================*/
+
+#parcerias{
+    /* background-color: #ebebeb; Cor de fundo Slide */
+}
+
+.slideshow-container {
+    position: relative; /* Permite posicionar elementos filhos com base neste contêiner */
+    max-width: 400px; /* Largura máxima do slideshow */
+    margin: auto; /* Centraliza o slideshow horizontalmente na página */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o contêiner */
+}
+
+.slide{
+    display: flex; /*Flexbon para alinhar o conteudo*/
+    justify-content: center; /*Centraliza horizontal*/
+    align-items: center; /*centraliza Vertical*/
+    height: 500px; /*Altura padrão do slide*/
+    background-color: #f1f1f1; /*Cor de fundo*/
+}
+
+.slide img {
+    width: 100%; /* A imagem vai ocupar toda a largura do slide */
+    height: auto; /* Altura proporcional à largura (mantém proporção) */
+    border-radius: 10px; /* Bordas arredondadas nas imagens */
+    max-width: 100%;  /*Define o tamanho das imagens largura*/
+    max-height: 100%; /*Define o tamanho das imagnes Atura*/
+    border-radius: 10px;
+    display: block; /* Remove espaço indesejado abaixo da imagem */
+    padding-top: 0px; /*Paddingda um espaço na margem do div*/
+  }
+  
+/* Classe para aplicar efeito de transição suave */
+.fade {
+    animation: fadeEffect 1s; /* Aplica a animação chamada "fadeEffect" com duração de 1 segundo */
+}
+  
+/* Define a animação do efeito de fade (transparência suave) */
+@keyframes fadeEffect {
+    from {opacity: 0.4} /* Inicia com 40% de opacidade (transparente) */
+    to {opacity: 1} /* Termina com 100% de opacidade (totalmente visível) */
+}
