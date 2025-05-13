@@ -1,3 +1,5 @@
+//=============== Slides ===================
+
 let slideIndex = 0;
 showSlides();
 
@@ -16,3 +18,32 @@ function showSlides() {
     setTimeout(showSlides, 2000); // Muda a imagem a cada 3 segundos
 }
 
+//=============== Script para rolagem ===================
+
+function scrollCards(value) {
+    document.getElementById('scroll-container').scrollBy({
+        left: value,
+        behavior: 'smooth'
+    });
+}
+
+//=============== SLIDE DE PROMOÇÕES===================
+
+document.addEventListener('DOMContentLoaded', function () {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slideP');
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Iniciar
+    showSlide(currentSlide);
+    setInterval(nextSlide, 3000); // Muda a cada 3 segundos
+});
