@@ -6,6 +6,14 @@
     box-sizing: border-box; /* Inclui padding e border dentro do cálculo da largura e altura dos elementos */
 }
 
+
+body {
+    background-image: url('imagens/streetwearMarcaAgua.webp');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 /*=================== NAVEGAÇÃO DA INDEX ====================*/
 
 .navbar {
@@ -138,23 +146,28 @@ footer img {
     max-width: 300px; /* Largura máxima do slide */
     margin: auto; /* Centraliza horizontalmente */
     overflow: hidden; /* Esconde partes do conteúdo que ultrapassarem o container */
+    height: 200px; /* <- Altura fixa, ajuste conforme sua necessidade */
 }
 
 .slideP {
-    display: flex; /* Ativa o flexbox para alinhamento do conteúdo */
+    display: none; /* Ativa o flexbox para alinhamento do conteúdo */
     justify-content: center; /* Centraliza horizontalmente os itens */
     align-items: center; /* Centraliza verticalmente os itens */
-    height: 300px; /* Altura fixa para o slide */
+    height: 400px; /* Altura fixa para o slide */
     width: 300px; /* Altura fixa para o slide */
     background-color: #f1f1f1; /* Fundo cinza claro */
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .slideP.active {
-    display: flex; /* Apenas o slide ativo é mostrado */
+    display: block; /* Apenas o slide ativo é mostrado */
     animation: fadeEffect 1s;
+    opacity: 1;
+    z-index: 1;
 }
 
 .slideP img {
@@ -165,6 +178,7 @@ footer img {
     border-radius: 10px; /* Arredonda os cantos da imagem */
     display: block; /* Remove espaços em branco indesejados ao redor da imagem */
     padding-top: 0px; /* Remove qualquer espaçamento superior */
+    object-fit: cover;
 }
 
 .promocoes {
@@ -214,6 +228,8 @@ footer img {
     min-width: 250px; /* Largura mínima do card */
     text-align: center; /* Texto centralizado */
     padding: 15px; /* Espaçamento interno */
+    min-width: 250px; /*para cards não ficarem espremidos em telas pequenas*/
+    max-width: 300px;/*para cards não ficarem espremidos em telas pequenas*/
 }
 
 .card:hover {

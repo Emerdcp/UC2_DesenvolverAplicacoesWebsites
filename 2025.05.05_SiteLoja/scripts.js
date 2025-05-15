@@ -20,12 +20,18 @@ function showSlides() {
 
 //=============== Script para rolagem ===================
 
+// function scrollCards(value) {
+//     document.getElementById('scroll-container').scrollBy({
+//         left: value,
+//         behavior: 'smooth'
+//     });
+// }
+
 function scrollCards(value) {
-    document.getElementById('scroll-container').scrollBy({
-        left: value,
-        behavior: 'smooth'
-    });
+    const container = document.getElementById("scroll-container");
+    container.scrollLeft += value;
 }
+
 
 //=============== SLIDE DE PROMOÇÕES===================
 
@@ -47,3 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentSlide);
     setInterval(nextSlide, 3000); // Muda a cada 3 segundos
 });
+
+
+
