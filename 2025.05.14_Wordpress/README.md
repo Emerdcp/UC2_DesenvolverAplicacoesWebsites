@@ -47,7 +47,7 @@ http://localhost/wordpress/wp-admin/setup-config.php
 http://localhost/wordpress/wp-login.php
 
 - Usuário Nome e E-mail: Emerson
-- Senha:
+- Senha: *Emer1406Car
 
 ![alt text](Acesso.png)
 
