@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetWear</title>
+    <link rel="icon" href="imagens/streetwearBone.webp">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body
+    style="background-image: url(imagens/streetwearMarcaAgua.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: 100%;">
+    <header>
+        <div id="menu"></div>
+        <script>
+            // Carregar o conteúdo do menu.html
+            fetch('menu.html')  // Garante que o caminho para o menu.html está correto
+                .then(response => response.text())  // Lê o conteúdo do menu.html
+                .then(data => {
+                    document.getElementById('menu').innerHTML = data;  // Insere o conteúdo no div com id "menu"
+                })
+                .catch(error => console.error('Erro ao carregar menu: ', error));  // Exibe o erro no console, caso ocorra
+        </script>
+    </header>
+
+    <section id="sobre">
+        <div class="container">
+            <div class="row">
+                <h1 class="centroTexto">Sobre</h1>
+                <p>A StreetWear é mais do que uma marca de roupas – é uma celebração da cultura urbana e de tudo o que ela
+                    representa. Fundada com a visão de transformar o streetwear em algo mais do que uma simples tendência,
+                    buscamos criar uma linha de produtos que una estilo, conforto e atitude. Nossa essência está na
+                    liberdade de expressão, no amor pela arte de rua e na energia que só a cidade pode proporcionar.
+
+                    Com um portfólio que abrange desde as roupas mais básicas até as peças mais ousadas, a StreetWear
+                    oferece algo para todos que desejam se destacar sem perder a autenticidade. Nossas coleções são pensadas
+                    para quem vive o dia a dia com intensidade, para quem transforma a rua em palco, seja nas passarelas da
+                    moda ou nas calçadas da cidade.
+
+                    Acreditamos que o streetwear é uma forma de contar histórias, e queremos que nossos clientes
+                    compartilhem suas próprias narrativas por meio das nossas roupas. Cada peça da StreetWear é feita para
+                    ser mais do que apenas um item de vestuário – ela é uma extensão do seu estilo de vida. De designs
+                    únicos a materiais de alta qualidade, trabalhamos constantemente para trazer o melhor do universo urbano
+                    para o seu guarda-roupa.
+
+                    No coração da StreetWear está a missão de criar um espaço inclusivo e diversificado, onde todos possam
+                    encontrar sua voz e estilo, sem limites ou restrições. Não importa de onde você vem ou o que você faz –
+                    o que importa é sua atitude, e nós estamos aqui para vestí-la.
+
+                    Seja você um amante das ruas, um criador, ou alguém em busca de roupas que refletem sua personalidade, a
+                    StreetWear está aqui para acompanhar sua jornada e fazer parte de sua história.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="redes">
+        <p class="text-center">&copy; StreetWear - Todos os direitos reservados - Siga nossas redes Sociais:
+            <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color: inherit;"><img
+                    src="imagens/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"
+                style="text-decoration: none; color: inherit;"></a><img src="imagens/facebook.png" alt="Facebook">
+        </p>
+    </footer>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
