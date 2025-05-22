@@ -224,7 +224,7 @@ footer img {
     width: 300px; /* Largura fixa */
     transition: transform 0.3s ease; /* Animação suave ao transformar */
     display: flex;
-    flex-direction: column; /* Elementos empilhados verticalmente */
+    
     min-width: 250px; /* Largura mínima do card */
     text-align: center; /* Texto centralizado */
     padding: 15px; /* Espaçamento interno */
