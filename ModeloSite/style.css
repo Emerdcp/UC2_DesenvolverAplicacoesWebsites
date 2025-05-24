@@ -1,0 +1,394 @@
+/*=================== RESET GERAL ====================*/
+
+* {
+    margin: 0; /* Remove toda margem externa de todos os elementos para evitar espaçamentos padrão inconsistentes */
+    padding: 0; /* Remove todo preenchimento interno padrão dos elementos */
+    box-sizing: border-box; /* Inclui padding e border dentro do cálculo da largura e altura dos elementos */
+}
+
+
+body {
+    background-image: url('imagens/streetwearMarcaAgua.webp');/*Imagem de fundo*/
+    background-attachment: fixed; /*Imagem de fixa*/
+    background-repeat: no-repeat;
+    background-size: 100%; /*Imagem com 100% da tela*/
+}
+
+/*=================== NAVEGAÇÃO DA INDEX ====================*/
+
+.navbar {
+    font-size: 1rem; /* Define o tamanho da fonte para os itens do menu */
+}
+
+.nav-link {
+    color: #000000 !important; /* Define a cor preta para os links e força isso com !important */
+    font-weight: 500; /* Peso médio para a fonte (meio negrito) */
+    margin-left: 15px; /* Espaço à esquerda de cada link, separando-os entre si */
+    text-align: center; /* Centraliza o texto dentro do elemento */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    transition: all 0.3s ease; /* Suaviza qualquer transição nas propriedades com duração de 0.3s */
+}
+
+.nav-link:hover {
+    color: #7f7f7f; /* Altera a cor para cinza ao passar o mouse */
+    font-weight: 700; /* Aumenta o peso da fonte para negrito */
+}
+
+.cta-button:hover {
+    background-color: #0b0b0b; /* Muda o fundo para preto quase total no hover */
+    color: white; /* Muda o texto para branco no hover */
+}
+
+/*=================== ACERTO DE FONTES E TEXTOS ====================*/
+
+body {
+    font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif; /* Define a fonte principal para o corpo do site */
+    line-height: 1.6; /* Aumenta o espaçamento vertical entre linhas de texto */
+    text-align: justify; /* Justifica os parágrafos, alinhando o texto nas duas margens */
+    font-size: 1rem; /* Tamanho base da fonte */
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo do body */
+    color: #333; /* Define a cor do texto como cinza escuro */
+    background-color: #f9f9f9; /* Cor de fundo clara para o corpo da página */
+}
+
+/*=================== ACERTO DE SECTION ====================*/
+
+section {
+    padding: 3rem 1rem; /* Espaçamento interno de 3rem no topo/baixo e 1rem nas laterais */
+    font-size: 1rem; /* Tamanho de fonte base dentro da section */
+    margin-bottom: 1rem; /* Espaço externo inferior de 1rem entre sections */
+}
+
+/*=================== LOGO MENU ====================*/
+
+.logo-blog, .logo-menu {
+    height: auto; /* Altura ajustada automaticamente conforme a largura */
+}
+
+.logo-blog {
+    max-width: 160px; /* Largura máxima para o logo do blog */
+}
+
+.logo-menu {
+    max-width: 80px; /* Largura máxima para o logo do menu */
+}
+
+.img-produtos {
+    max-width: 200px; /* Largura máxima para imagens de produtos */
+    height: auto; /* Altura ajustada automaticamente */
+}
+
+
+/*=================== CENTRALIZAÇÕES ====================*/
+
+.centroTexto, .centroBlog {
+    text-align: center; /* Centraliza horizontalmente o conteúdo do texto */
+}
+
+/*=================== ACERTO DO RODAPÉ DA PÁGINA ====================*/
+
+footer {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo do rodapé */
+}
+
+footer img {
+    max-width: 35px; /* Define largura máxima para imagens no rodapé */
+    height: auto; /* Altura proporcional à largura */
+}
+
+
+/*=================== TRANSAÇÕE DOS SLIDE ====================*/
+
+#parcerias {} /* Vazio, possivelmente para futuras regras */
+
+.slideshow-container {
+    position: relative; /* Permite posicionamento absoluto dos elementos filhos */
+    max-width: 400px; /* Largura máxima do slide */
+    margin: auto; /* Centraliza horizontalmente */
+    overflow: hidden; /* Esconde partes do conteúdo que ultrapassarem o container */
+}
+
+.slide {
+    display: flex; /* Ativa o flexbox para alinhamento do conteúdo */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+    align-items: center; /* Centraliza verticalmente os itens */
+    height: 500px; /* Altura fixa para o slide */
+    background-color: #f1f1f1; /* Fundo cinza claro */
+}
+
+.slide img {
+    width: 100%; /* Imagem ocupa toda a largura disponível */
+    height: auto; /* Altura proporcional */
+    max-width: 100%; /* Limita a largura máxima da imagem */
+    max-height: 100%; /* Limita a altura máxima */
+    border-radius: 10px; /* Arredonda os cantos da imagem */
+    display: block; /* Remove espaços em branco indesejados ao redor da imagem */
+    padding-top: 0px; /* Remove qualquer espaçamento superior */
+}
+
+.fade {
+    animation: fadeEffect 1s; /* Aplica uma animação de desvanecimento com 1 segundo de duração */
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.4} /* Começa com opacidade baixa */
+    to {opacity: 1} /* Termina totalmente visível */
+}
+
+
+/*=================== TRANSAÇÕE DOS SLIDE - PROMOÇÕES ====================*/
+
+.slideshow-promocoes {
+    position: relative; /* Permite posicionamento absoluto dos elementos filhos */
+    max-width: 300px; /* Largura máxima do slide */
+    margin: auto; /* Centraliza horizontalmente */
+    overflow: hidden; /* Esconde partes do conteúdo que ultrapassarem o container */
+    height: 200px; /* <- Altura fixa, ajuste conforme sua necessidade */
+}
+
+.slideP {
+    display: none; /* Ativa o flexbox para alinhamento do conteúdo */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+    align-items: center; /* Centraliza verticalmente os itens */
+    height: 400px; /* Altura fixa para o slide */
+    width: 300px; /* Altura fixa para o slide */
+    background-color: #f1f1f1; /* Fundo cinza claro */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slideP.active {
+    display: block; /* Apenas o slide ativo é mostrado */
+    animation: fadeEffect 1s;
+    opacity: 1;
+    z-index: 1;
+}
+
+.slideP img {
+    width: 100%; /* Imagem ocupa toda a largura disponível */
+    height: auto; /* Altura proporcional */
+    max-width: 100%; /* Limita a largura máxima da imagem */
+    max-height: 100%; /* Limita a altura máxima */
+    border-radius: 10px; /* Arredonda os cantos da imagem */
+    display: block; /* Remove espaços em branco indesejados ao redor da imagem */
+    padding-top: 0px; /* Remove qualquer espaçamento superior */
+    object-fit: cover;
+}
+
+.promocoes {
+    animation: fadeEffect 1s; /* Aplica uma animação de desvanecimento com 1 segundo de duração */
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.4} /* Começa com opacidade baixa */
+    to {opacity: 1} /* Termina totalmente visível */
+}
+
+/*=================== CARDS ====================*/
+
+.cards-scroll {
+    overflow-x: auto; /* Permite rolagem horizontal */
+    overflow-y: hidden; /* Impede rolagem vertical */
+    scroll-behavior: smooth; /* Suaviza a rolagem */
+    padding: 10px 0; /* Espaçamento vertical de 10px */
+    display: flex; /* Usa grid layout ------ grid ALTERADO PARA FLEX /* Usa flexbox para disposição horizontal dos cards */
+    grid-template-columns: 1fr; /* Uma única coluna */
+    gap: 10px; /* Espaço entre os elementos */
+    -ms-overflow-style: none; /* Remove barra de rolagem no IE/Edge */
+    scrollbar-width: none; /* Remove barra no Firefox */
+}
+
+.cards-scroll::-webkit-scrollbar {
+    display: none; /* Remove barra de rolagem no Chrome/Safari */
+}
+
+.cards {
+    display: inline-flex; /* Flex horizontal com largura do conteúdo */
+    gap: 20px; /* Espaçamento entre cards */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    margin-top: 20px; /* Espaço acima dos cards */
+}
+
+.card {
+    background: #ffffff; /* Fundo branco */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 10px; /* Cantos arredondados */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a borda */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Sombra suave ao redor do card */
+    width: 300px; /* Largura fixa */
+    transition: transform 0.3s ease; /* Animação suave ao transformar */
+    display: flex;
+    
+    min-width: 250px; /* Largura mínima do card */
+    text-align: center; /* Texto centralizado */
+    padding: 15px; /* Espaçamento interno */
+    min-width: 250px; /*para cards não ficarem espremidos em telas pequenas*/
+    max-width: 300px;/*para cards não ficarem espremidos em telas pequenas*/
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Eleva o card levemente ao passar o mouse */
+}
+
+.card img {
+    width: 100%; /* Imagem ocupa toda a largura do card */
+    height: 180px; /* Altura fixa */
+    object-fit: cover; /* Imagem cobre o espaço sem distorção */
+    border-bottom: 1px solid #eee; /* Linha inferior leve */
+    border-radius: 6px; /* Cantos levemente arredondados */
+    margin-bottom: 10px; /* Espaço abaixo da imagem */
+}
+
+.card h3 {
+    margin: 15px; /* Espaçamento ao redor do título */
+    color: #333; /* Cor escura */
+}
+
+.card p {
+    margin: 0 15px 15px; /* Espaçamento nas laterais e abaixo */
+    color: #666; /* Texto em cinza médio */
+}
+
+/*=================== BOTÃO DE ROLAGEM ====================*/
+
+.btn-scroll {
+    position: absolute; /* Posiciona em relação ao container pai */
+    top: 50%; /* Move o botão verticalmente ao meio */
+    transform: translateY(-50%); /* Ajusta para centralizar exatamente no meio */
+    background-color: transparent; /* Sem fundo */
+    color: #333; /* Cor escura para o ícone */
+    border: none; /* Sem borda */
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+    z-index: 10; /* Garante que fique sobre outros elementos */
+    border-radius: 0; /* Sem arredondamento */
+    font-size: 32px; /* Tamanho grande para o ícone */
+    box-shadow: none; /* Sem sombra */
+}
+
+.btn-scroll.left {
+    left: -40px; /* Posiciona o botão à esquerda */
+}
+
+.btn-scroll.right {
+    right: -40px; /* Posiciona o botão à direita */
+}
+
+
+
+
+
+
+
+/*================== BOTÃO MOVER "SETINHA" APRESENTADO NOS CARDS ==================*/
+.btn-scroll {
+    position: absolute; /* Posiciona o botão de forma absoluta dentro do contêiner pai */
+    top: 60%; /* Alinha verticalmente ao centro */
+    transform: translateY(-50%); /* Corrige o alinhamento central exato */
+    border: none; /*Coloca Broda no Botão*/
+    background-color: transparent; /* <-- Remove o fundo */
+    color: #333; /* Cor da seta > */
+    padding: 10px;
+    cursor: pointer; /*Ao Clicar*/
+    z-index: 10;
+    border-radius: 0; /* <-- Remove o formato arredondado */
+    font-size: 32px; /* Tamanho da seta */
+    box-shadow: none; /* Remove qualquer sombra */
+    transition: transform 0.3s ease; /* Suaviza a animação de movimento */
+    background: none; /* Remove o fundo padrão do botão */
+    cursor: pointer; /* Mostra cursor de clique */
+    z-index: 1; /* Garante que o botão fique acima dos outros elementos */
+  }
+  
+  .btn-scroll.left {
+    left: -20px; /* Aumente esse valor para mover mais pra fora */
+  }
+  
+  .btn-scroll.right {
+    right: -20px; /* Aumente esse valor para mover mais pra fora */
+  }
+  
+  /* Animação contínua esquerda */
+  .btn-scroll.left:hover {
+    animation: moveLeft 0.6s infinite alternate ease-in-out;
+  }
+  
+  /* Animação contínua direita */
+  .btn-scroll.right:hover {
+    animation: moveRight 0.6s infinite alternate ease-in-out;
+  }
+  
+  /* Keyframes para botão da esquerda */
+  @keyframes moveLeft {
+    from {
+      transform: translateY(-50%) translateX(0);
+    }
+    to {
+      transform: translateY(-50%) translateX(-12px);
+    }
+  }
+  
+  /* Keyframes para botão da direita */
+  @keyframes moveRight {
+    from {
+      transform: translateY(-50%) translateX(0);
+    }
+    to {
+      transform: translateY(-50%) translateX(12px);
+    }
+  }
+ 
+
+  
+
+
+/*================== CARDS LADO MOVENDO LATERAL ==================*/
+  .container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+    
+  
+   /*================== RESPONSAVIDADE ==================*/
+
+
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  
+    .btn-scroll {
+      display: none;
+    }
+
+  }
+
+
+/*================== RESPONSAVIDADE ==================
+
+
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  z-index: 1000; /* opcional, para garantir que fique sobre outros elementos 
+  
+  
+  */
