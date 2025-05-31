@@ -23,7 +23,7 @@ http://localhost/wordpress/wp-admin/setup-config.php
 
 05. Manter o mesmo nome da criação do banco de dados.
 - Nome do Banco de Dados: Wordpress
-- Nome de Usuário: hoot
+- Nome de Usuário: root
 - Senha: em branco
 - Servidor do banco de dados: localhost
 - Prefixo da tabela: wp_
