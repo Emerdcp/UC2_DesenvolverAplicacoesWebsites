@@ -10,8 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body
-    style="background-image: url(imagens/streetwearMarcaAgua.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: 100%;">
+<body class="bg-image">
     <header>
         <div id="menu"></div>
         <script>
@@ -25,24 +24,30 @@
         </script>
     </header>
 
-    <section id="blogs">
-        <div class="container">
-            <div class="row">
-                <h1 class="centroTexto">Blogs</h1>
-                <p>A [Nome da Loja] não é apenas uma loja – é uma comunidade de apaixonados pelo universo streetwear, onde estilo e atitude se encontram a cada esquina da cidade. Para aqueles que buscam se inspirar e se manter atualizados sobre tudo que acontece nesse mundo vibrante, o nosso blog é o lugar perfeito para você.</p>
-                <div class="col-12 col-md-6 centroBlog">
-                    <h3>Editoras</h3>
-                    <p></p>
-                    <a href="editoras.html"><img src="imagens/editora.jpg" class="logo-blog" alt="Editora"></a>
-                </div>
-                <div class="col-12 col-md-6 centroBlog">
-                    <h3>Novas Coleções</h3>
-                    <p></p>
-                    <a href="colecoes.html"><img src="imagens/colecao.jpg" class="logo-blog" alt="Editora"></a>
+    <main>
+        <section id="blogs" class="py-5">
+            <div class="container">
+                <div class="row text-center">
+                    <h1 class="mb-4">Blogs</h1>
+                    <p>A [Nome da Loja] não é apenas uma loja – é uma comunidade de apaixonados pelo universo streetwear, onde estilo e atitude se encontram a cada esquina da cidade. Para aqueles que buscam se inspirar e se manter atualizados sobre tudo que acontece nesse mundo vibrante, o nosso blog é o lugar perfeito para você.</p>
+                    
+                    <div class="col-12 col-md-6 mb-4">
+                        <h3>Editoras</h3>
+                        <a href="editoras.html" aria-label="Ir para o blog de Editoras">
+                            <img src="imagens/editora.jpg" class="img-fluid logo-blog" alt="Imagem sobre Editoras">
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-4">
+                        <h3>Novas Coleções</h3>
+                        <a href="colecoes.html" aria-label="Ir para o blog de Novas Coleções">
+                            <img src="imagens/colecao.jpg" class="img-fluid logo-blog" alt="Imagem sobre Novas Coleções">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer id="redes">
         <p class="text-center">&copy; StreetWear - Todos os direitos reservados - Siga nossas redes Sociais:
@@ -52,17 +57,19 @@
                 style="text-decoration: none; color: inherit;"></a><img src="imagens/facebook.png" alt="Facebook">
         </p>
     </footer>
-    ... <!-- Acessibilidade -->
+
+    <!-- Acessibilidade -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+
     <script src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>

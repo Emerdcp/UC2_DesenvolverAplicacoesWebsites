@@ -84,6 +84,68 @@ body {
     height: auto;
 }
 
+/** Container de controle de compra (quantidade + botões) */
+.controle-compra {
+    display: flex;                   /* Alinha em linha */
+    align-items: center;            /* Centraliza verticalmente */
+    gap: 0.5rem;                    /* Espaço entre elementos */
+    margin-top: 1rem;               /* Espaço acima */
+    justify-content: center;        /* Centraliza horizontalmente */
+    flex-wrap: wrap;                /* Quebra em telas pequenas */
+}
+
+/** Rótulo do campo de quantidade */
+.controle-compra label {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/** Campo de entrada de quantidade */
+.controle-compra .quantidade {
+    width: 60px;
+    height: 34px;
+    padding: 4px 6px;
+    text-align: center;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/** Botão com borda e texto amarelos */
+.btn-outline-yellow {
+    background-color: transparent;
+    color: #f2a900;
+    border: 2px solid #f2a900;
+    height: 34px;
+    font-size: 0.9rem;
+    padding: 4px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-yellow:hover {
+    background-color: #f2a900;
+    color: #000;
+}
+
+/** Botão preenchido de amarelo */
+.btn-yellow {
+    background-color: #f2a900;
+    color: #000;
+    border: 2px solid #f2a900;
+    height: 34px;
+    font-size: 0.9rem;
+    padding: 4px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background-color: #d99200;
+    color: #fff;
+}
+
 /*=================== ACERTO DE FONTES E TEXTOS ====================*/
 
 body {
@@ -147,13 +209,13 @@ footer img {
     display: flex; /* Ativa o flexbox para alinhamento do conteúdo */
     justify-content: center; /* Centraliza horizontalmente os itens */
     align-items: center; /* Centraliza verticalmente os itens */
-    height: 500px; /* Altura fixa para o slide */
+    height: 400px; /* Altura fixa para o slide */
     background-color: #f1f1f1; /* Fundo cinza claro */
 }
 
 .slide img {
     width: 100%; /* Imagem ocupa toda a largura disponível */
-    height: auto; /* Altura proporcional */
+    height: 100%; /* Altura proporcional */
     max-width: 100%; /* Limita a largura máxima da imagem */
     max-height: 100%; /* Limita a altura máxima */
     border-radius: 10px; /* Arredonda os cantos da imagem */
@@ -401,6 +463,80 @@ footer img {
     margin: 0 auto; /* opcional para centralizar */
     display: block;  /* para o margin auto funcionar */
   }
+
+
+/*================== BLOG ==================*/
+body.bg-image {
+    background-image: url('imagens/streetwearMarcaAgua.webp');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#blogs .logo-blog {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#redes img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+#redes img:hover {
+    transform: scale(1.1);
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*================== PAGINA SOBRE ==================*/

@@ -10,7 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body style="background-image: url(imagens/streetwearMarcaAgua.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: 100%;">
+<body
+    style="background-image: url(imagens/streetwearMarcaAgua.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: 100%;">
     <header>
         <div id="menu"></div>
         <script>
@@ -28,50 +29,83 @@
         <div class="container">
             <div class="row">
                 <h1 class="centroTexto">Produtos</h1>
-                <div class="col-12 col-md-3 centroBlog">
-                    <h3>Camisetas</h3>
-                    <p>Opções básicas, manga longa, curta, oversized, estampadas e para todos os estilos.</p>
-                    <img src="imagens/camisetas.jpg" alt="Camisetas" class="img-produtos">
+                <div class="col-12 col-md-4 centroBlog">
+                    <h3>Conjunto Feminino</h3>
+                    <p>Várias opções de conjuntos feminino para todos os estilos.</p>
+                    <img src="imagens/conjunto.jpg" alt="Conjunto" class="img-produtos">
+                    <div class="controle-compra">
+                        <label for="qtd-camisetas" class="mb-0">Qtd:</label>
+                        <input type="number" id="qtd-camisetas" class="form-control quantidade" min="1" value="1">
+                        <button class="btn-outline-yellow">Carrinho</button>
+                        <button class="btn-yellow">Comprar</button>
+                    </div>
                 </div>
-                <div class="col-12 col-md-3 centroBlog">
-                    <h3>Tênis</h3>
-                    <p>O Tênis Qix Skate 90's, com o estilo dos pisantes clássicos dos anos 90.</p>
-                    <img src="imagens/tenis.jpg" alt="Tênis" class="img-produtos">
+                <div class="col-12 col-md-4 centroBlog">
+                    <h3>Bolsas</h3>
+                    <p>As melhores bolsas e estilos você encontra aqui.</p>
+                    <img src="imagens/bolsas.jpg" alt="Bolsa" class="img-produtos">
+                    <div class="controle-compra">
+                        <label for="qtd-tenis">Qtd:</label>
+                        <input type="number" id="qtd-tenis" class="quantidade" min="1" value="1">
+                        <button class="btn-outline-yellow">Adicionar ao Carrinho</button>
+                        <button class="btn-yellow">Comprar</button>
+                    </div>
                 </div>
-                <div class="col-12 col-md-3 centroBlog">
+                <div class="col-12 col-md-4 centroBlog">
                     <h3>Boné</h3>
                     <p>Boné Masculino Estilo Beisebol Vintage de Algodão com Aba Curva.</p>
-                    <img src="imagens/bone.jpg" alt="Tênis" class="img-produtos">
-                </div>
-                <div class="col-12 col-md-3 centroBlog">
-                    <h3>Boné</h3>
-                    <p>Boné Masculino Estilo Beisebol Vintage de Algodão com Aba Curva.</p>
-                    <img src="imagens/bone.jpg" alt="Tênis" class="img-produtos">
+                    <img src="imagens/bone.jpg" alt="Boné" class="img-produtos">
+                    <div class="controle-compra">
+                        <label for="qtd-bone">Qtd:</label>
+                        <input type="number" id="qtd-bone" class="form-control quantidade" min="1" value="1">
+                        <button class="btn-outline-yellow">Adicionar ao Carrinho</button>
+                        <button class="btn-yellow">Comprar</button>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4 centroBlog">
                     <h3>Camisetas</h3>
                     <p>Opções básicas, manga longa, curta, oversized, estampadas e para todos os estilos.</p>
                     <img src="imagens/camisetas.jpg" alt="Camisetas" class="img-produtos">
+                    <div class="controle-compra">
+                        <label for="qtd-camisetas" class="mb-0">Qtd:</label>
+                        <input type="number" id="qtd-camisetas" class="form-control quantidade" min="1" value="1">
+                        <button class="btn-outline-yellow">Carrinho</button>
+                        <button class="btn-yellow">Comprar</button>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4 centroBlog">
                     <h3>Tênis</h3>
                     <p>O Tênis Qix Skate 90's, com o estilo dos pisantes clássicos dos anos 90.</p>
                     <img src="imagens/tenis.jpg" alt="Tênis" class="img-produtos">
+                    <div class="controle-compra">
+                        <label for="qtd-tenis">Qtd:</label>
+                        <input type="number" id="qtd-tenis" class="quantidade" min="1" value="1">
+                        <button class="btn-outline-yellow">Adicionar ao Carrinho</button>
+                        <button class="btn-yellow">Comprar</button>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4 centroBlog">
-                    <h3>Boné</h3>
-                    <p>Boné Masculino Estilo Beisebol Vintage de Algodão com Aba Curva.</p>
-                    <img src="imagens/bone.jpg" alt="Tênis" class="img-produtos">
+                    <h3>Relogio</h3>
+                    <p>Váriso tipos de relogios para você escolher.</p>
+                    <img src="imagens/relogio.jpg" alt="Relogio" class="img-produtos">
+                    <div class="controle-compra">
+                        <label for="qtd-bone">Qtd:</label>
+                        <input type="number" id="qtd-bone" class="form-control quantidade" min="1" value="1">
+                        <button class="btn-outline-yellow">Adicionar ao Carrinho</button>
+                        <button class="btn-yellow">Comprar</button>
+                    </div>
                 </div>
             </div>
         </div>
-
     </section>
-    
+
+
     <footer id="redes">
         <p class="text-center">&copy; StreetWear - Todos os direitos reservados - Siga nossas redes Sociais:
-            <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="imagens/instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" style="text-decoration: none; color: inherit;"></a><img src="imagens/facebook.png" alt="Facebook">
+            <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color: inherit;"><img
+                    src="imagens/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"
+                style="text-decoration: none; color: inherit;"></a><img src="imagens/facebook.png" alt="Facebook">
         </p>
     </footer>
     <script src="scripts.js"></script>
