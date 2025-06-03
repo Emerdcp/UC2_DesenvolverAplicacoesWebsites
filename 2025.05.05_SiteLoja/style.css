@@ -14,29 +14,74 @@ body {
     background-size: 100%;
 }
 
-/*=================== NAVEGAÇÃO DA INDEX ====================*/
+/*=================== NAVEGAÇÃO DA INDEX MENU ====================*/
 
 .navbar {
-    font-size: 1rem; /* Define o tamanho da fonte para os itens do menu */
+    font-size: 1rem;
+    background: linear-gradient(to right, #ffffff 0%, #1a1a1a 100%);
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+/*=================== LINKS DO MENU ====================*/
 .nav-link {
-    color: #000000 !important; /* Define a cor preta para os links e força isso com !important */
-    font-weight: 500; /* Peso médio para a fonte (meio negrito) */
-    margin-left: 15px; /* Espaço à esquerda de cada link, separando-os entre si */
-    text-align: center; /* Centraliza o texto dentro do elemento */
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    transition: all 0.3s ease; /* Suaviza qualquer transição nas propriedades com duração de 0.3s */
+    color: #ffffff !important;       /* Texto branco */
+    font-weight: 500;
+    margin-left: 15px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #f2a900;      /* Linha amarela abaixo no hover */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .nav-link:hover {
-    color: #7f7f7f; /* Altera a cor para cinza ao passar o mouse */
-    font-weight: 700; /* Aumenta o peso da fonte para negrito */
+    color: #f2a900 !important;       /* Cor amarela no hover */
+    font-weight: 700;
 }
 
+/*=================== BOTÃO CTA (caso use) ====================*/
 .cta-button:hover {
-    background-color: #0b0b0b; /* Muda o fundo para preto quase total no hover */
-    color: white; /* Muda o texto para branco no hover */
+    background-color: #0b0b0b;
+    color: white;
+}
+
+/*=================== LOGO ====================*/
+.logo-blog, .logo-menu {
+    height: auto;
+}
+
+.logo-blog {
+    max-width: 160px;
+}
+
+.logo-menu {
+    max-width: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo-menu:hover {
+    transform: scale(1.05);
+}
+
+/*=================== PRODUTOS ====================*/
+.img-produtos {
+    max-width: 200px;
+    height: auto;
 }
 
 /*=================== ACERTO DE FONTES E TEXTOS ====================*/
@@ -59,25 +104,6 @@ section {
     margin-bottom: 1rem; /* Espaço externo inferior de 1rem entre sections */
 }
 
-/*=================== LOGO MENU ====================*/
-
-.logo-blog, .logo-menu {
-    height: auto; /* Altura ajustada automaticamente conforme a largura */
-}
-
-.logo-blog {
-    max-width: 160px; /* Largura máxima para o logo do blog */
-}
-
-.logo-menu {
-    max-width: 80px; /* Largura máxima para o logo do menu */
-}
-
-.img-produtos {
-    max-width: 200px; /* Largura máxima para imagens de produtos */
-    height: auto; /* Altura ajustada automaticamente */
-}
-
 
 /*=================== CENTRALIZAÇÕES ====================*/
 
@@ -90,19 +116,25 @@ section {
 footer {
     background-color: #000; /* Fundo preto */
     color: #fff; /* Texto branco */
-    padding: 20px; /* Espaçamento interno */
+    padding: 10px; /* Espaçamento interno */
     text-align: center; /* Centraliza o conteúdo do rodapé */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 footer img {
-    max-width: 35px; /* Define largura máxima para imagens no rodapé */
+    max-width: 25px; /* Define largura máxima para imagens no rodapé */
     height: auto; /* Altura proporcional à largura */
 }
 
 
 /*=================== TRANSAÇÕE DOS SLIDE ====================*/
 
-#parcerias {} /* Vazio, possivelmente para futuras regras */
+#parcerias {/* Vazio, possivelmente para futuras regras */
+
+} 
 
 .slideshow-container {
     position: relative; /* Permite posicionamento absoluto dos elementos filhos */
@@ -146,14 +178,14 @@ footer img {
     max-width: 300px; /* Largura máxima do slide */
     margin: auto; /* Centraliza horizontalmente */
     overflow: hidden; /* Esconde partes do conteúdo que ultrapassarem o container */
-    height: 200px; /* <- Altura fixa, ajuste conforme sua necessidade */
+    height: 300px; /* <- Altura fixa, ajuste conforme sua necessidade */
 }
 
 .slideP {
     display: none; /* Ativa o flexbox para alinhamento do conteúdo */
     justify-content: center; /* Centraliza horizontalmente os itens */
     align-items: center; /* Centraliza verticalmente os itens */
-    height: 400px; /* Altura fixa para o slide */
+    height: 300px; /* Altura fixa para o slide */
     width: 300px; /* Altura fixa para o slide */
     background-color: #f1f1f1; /* Fundo cinza claro */
     position: absolute;
@@ -172,7 +204,7 @@ footer img {
 
 .slideP img {
     width: 100%; /* Imagem ocupa toda a largura disponível */
-    height: auto; /* Altura proporcional */
+    height: 100%; /* Altura proporcional */
     max-width: 100%; /* Limita a largura máxima da imagem */
     max-height: 100%; /* Limita a altura máxima */
     border-radius: 10px; /* Arredonda os cantos da imagem */
@@ -308,19 +340,165 @@ footer img {
   }
 
 
-/*================== RESPONSAVIDADE ==================
-
-
-
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  z-index: 1000; /* opcional, para garantir que fique sobre outros elementos 
+/*================== TAMANHO DAS IMAGENS TELEFOEN E WHATS==================*/
+#localizacao img {
+    width: 20px; /* ou qualquer tamanho que desejar */
+    height: auto; /* mantém a proporção */
+    margin: 5px 0;
+  }
   
+  #contato img {
+    width: 20px; /* ou qualquer tamanho que desejar */
+    height: auto; /* mantém a proporção */
+    margin: 5px 0;
+  }
   
-  */
+  #produtos .produtosBotao {
+    width: 20px; /* ou qualquer tamanho que você deseja */
+    height: auto; /* mantém a proporção */
+    margin: 5px 0;
+  }
+  
+  #quemSomos img {
+    width: 20px; /* ou qualquer tamanho que desejar */
+    height: auto; /* mantém a proporção */
+    margin: 5px 0;
+  }
+
+
+
+
+/*================== PAGINA SOBRE ==================*/
+
+  #sobre p.lead {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  #sobre img {
+    max-height: 350px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .centroTexto {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  
+  @media (max-width: 767px) {
+    #sobre img {
+      max-height: 250px;
+    }
+  }
+  
+
+  .img-pequena {
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto; /* opcional para centralizar */
+    display: block;  /* para o margin auto funcionar */
+  }
+
+
+/*================== PAGINA SOBRE ==================*/
+
+
+  #hero {
+    height: 80vh; /* Altura da seção ocupando 80% da altura da viewport */
+    background: url('imagens/hero-streetwear.jpg') no-repeat center center; /* Imagem de fundo centralizada e sem repetição */
+    background-size: cover; /* Cobre todo o espaço, ajustando a imagem proporcionalmente */
+    color: #f0f0f0; /* Cor do texto (cinza claro) */
+    display: flex; /* Usamos flexbox para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center; /* Texto alinhado ao centro */
+    position: relative; /* Para posicionar o pseudo-elemento ::before */
+    padding: 0 15px; /* Espaçamento horizontal para não encostar nas bordas */
+  }
+  
+  /* Cria uma camada escura semitransparente sobre a imagem para melhorar contraste */
+  #hero::before {
+    content: ""; /* Necessário para exibir o pseudo-elemento */
+    position: absolute; /* Posiciona exatamente sobre o #hero */
+    top: 0; left: 0; right: 0; bottom: 0; /* Ocupa toda a área da seção */
+    background: rgba(0, 0, 0, 0.6); /* Fundo preto com 60% de opacidade */
+    z-index: 1; /* Fica abaixo do conteúdo real, mas acima da imagem */
+  }
+  
+  /* Container dentro do hero recebe posição relativa para ficar acima da camada escura */
+  #hero .container {
+    position: relative; /* Para que fique acima da sombra do ::before */
+    z-index: 2; /* Garante que o conteúdo fique na frente */
+  }
+  
+  /* Estilo do título principal */
+  #hero h1 {
+    font-size: 3rem; /* Tamanho grande para destaque */
+    font-weight: 900; /* Negrito extra para impacto visual */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #f2a900; /* Cor amarelo queimado para destacar */
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* Sombra no texto para melhor leitura sobre o fundo */
+  }
+  
+  /* Estilo do parágrafo líder */
+  #hero p.lead {
+    font-size: 1.5rem; /* Texto maior para destaque */
+    margin-bottom: 30px; /* Espaço abaixo do parágrafo */
+    color: #ddd; /* Cinza claro para suavidade */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* Sombra leve para contraste */
+  }
+  
+  /* Estilo do botão principal */
+  #hero a.btn-primary {
+    background-color: #f2a900; /* Cor de fundo amarelo */
+    border-color: #f2a900; /* Mesma cor para a borda */
+    color: #1a1a1a; /* Texto escuro para contraste */
+    font-weight: 700; /* Texto em negrito */
+    padding: 12px 30px; /* Espaçamento interno maior para botão */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(242,169,0,0.6); /* Sombra amarela para dar destaque */
+  }
+  
+  /* Estilo do botão ao passar o mouse */
+  #hero a.btn-primary:hover {
+    background-color: #d18c00; /* Amarelo mais escuro */
+    border-color: #d18c00; /* Bordas acompanham a cor */
+    color: #fff; /* Texto branco para contraste */
+    box-shadow: 0 6px 12px rgba(209,140,0,0.8); /* Sombra mais forte no hover */
+  }
+  
+
+
+
+
+
+
+
+
+/* Estilos para o slideshow */
+.slideshow-promocoes {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajuste conforme necessário */
+    overflow: hidden;
+  }
+  
+  .slideP {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slideP img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slideP.active {
+    display: block;
+  }
+  

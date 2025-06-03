@@ -11,54 +11,76 @@
 </head>
 
 <body>
-<!-- <body>style="background-image: url(imagens/streetwearMarcaAgua.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: 100%;" -->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="#home">
-                    <img src="imagens/streetwearMenor.webp" alt="StreetWear" class="logo-menu">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="historiaMarca.html">História da Marca</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="parcerias.html">Parcerias</a></li>
-                        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+    <!-- <body>style="background-image: url(imagens/streetwearMarcaAgua.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: 100%;" -->
 
-                        <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div id="menu"></div>
+    <script>
+        // Carregar o conteúdo do menu.html
+        fetch('menu.html')  // Garante que o caminho para o menu.html está correto
+            .then(response => response.text())  // Lê o conteúdo do menu.html
+            .then(data => {
+                document.getElementById('menu').innerHTML = data;  // Insere o conteúdo no div com id "menu"
+            })
+            .catch(error => console.error('Erro ao carregar menu: ', error));  // Exibe o erro no console, caso ocorra
+    </script>
 
     <section id="promocoes">
         <div class="container">
             <div class="row">
-                <h1 class="centroTexto">Promoções</h1>
-                <p class="text-center">As melhores ofertas, você encontra por aqui</p>
-                <div class="slideshow-promocoes">
-                    <div class="slideP active">
-                        <img src="imagens/promocoes/promo1.jpg" alt="Desconto em camisetas streetwear">
+                <!-- Slide 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="slideshow-promocoes" id="slideshow1">
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo1.jpg" alt="Promoção 1">
+                        </div>
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo2.jpg" alt="Promoção 2">
+                        </div>
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo3.webp" alt="Promoção 3">
+                        </div>
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo4.jpg" alt="Promoção 4">
+                        </div>
                     </div>
-                    <div class="slideP">
-                        <img src="imagens/promocoes/promo2.jpg" alt="Promoção 2">
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="slideshow-promocoes" id="slideshow2">
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo5.jpg" alt="Promoção 5">
+                        </div>
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo6.jpg" alt="Promoção 6">
+                        </div>
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo7.jpg" alt="Promoção 7">
+                        </div>
                     </div>
-                    <div class="slideP">
-                        <img src="imagens/promocoes/promo3.webp" alt="Promoção 3">
-                    </div>
-                    <div class="slideP">
-                        <img src="imagens/promocoes/promo4.jpg" alt="Promoção 4">
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="slideshow-promocoes" id="slideshow3">
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo8.jpg" alt="Promoção 8">
+                        </div>
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo9.jpg" alt="Promoção 9">
+                        </div>
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo10.jpg" alt="Promoção 10">
+                        </div>
+                        <div class="slideP">
+                            <img src="imagens/promocoes/promo11.jpg" alt="Promoção 11">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section id="produtos" class="secao-cards">
         <div class="container">
@@ -106,74 +128,25 @@
     </section>
 
     <hr>
-
-    <section id="contato">
-        <div class="container">
-            <div class="row">
-                <h1 class="centroTexto">Contato</h1>
-                <form action="###########.php" method="POST" enctype="multipart/form-data">
-                    <div class="container">
-                        <h4>Digite sua mensagem:</h4>
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <label for="nome">Nome</label>
-                                <input type="text" placeholder="Nome" id="nome" name="nome" class="form-control">
-                                <br>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <label for="email">E-mail</label>
-                                <input type="email" placeholder="E-mail" id="email" class="form-control">
-                                <br>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <label for="email">Telefone</label>
-                                <input type="tel" placeholder="Telefone" id="telefone" class="form-control">
-                                <br>
-                            </div>
-                            <div class="col-12 col-md-12">
-                                <label for="observacao">Nós mande sua mensagem</label>
-                                <textarea name="observacao" id="observacao" rows="3" class="form-control"></textarea>
-                                <br>
-                            </div>
-                            <div class="col-12 col-md-12">
-                                <button type="submit" class="btn btn-primary">Enviar</button>
-                                <button type="reset" class="btn btn-secondary">Cancelar</button>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <hr>
     <footer id="redes">
         <p class="text-center">&copy; StreetWear - Todos os direitos reservados - Siga nossas redes Sociais:
-            <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="imagens/instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" style="text-decoration: none; color: inherit;"><img src="imagens/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color: inherit;"><img
+                    src="imagens/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"
+                style="text-decoration: none; color: inherit;"><img src="imagens/facebook.png" alt="Facebook"></a>
         </p>
     </footer>
-
-
-        ... <!-- Acessibilidade -->
-      
-        <div vw class="enabled">
-          <div vw-access-button class="active"></div>
-          <div vw-plugin-wrapper>
+    ... <!-- Acessibilidade -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
-          </div>
         </div>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-          new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
-
-
-
-
-
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <script src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>

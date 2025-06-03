@@ -12,28 +12,16 @@
 
 <body style="background-image: url(imagens/streetwearMarcaAgua.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: 100%;">
     <header>
-        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="#home">
-                    <img src="imagens/streetwearMenor.webp" alt="StreetWear" class="logo-menu">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="historiaMarca.html">História da Marca</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="parcerias.html">Parcerias</a></li>                        
-                        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
-
-                        <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div id="menu"></div>
+        <script>
+            // Carregar o conteúdo do menu.html
+            fetch('menu.html')  // Garante que o caminho para o menu.html está correto
+                .then(response => response.text())  // Lê o conteúdo do menu.html
+                .then(data => {
+                    document.getElementById('menu').innerHTML = data;  // Insere o conteúdo no div com id "menu"
+                })
+                .catch(error => console.error('Erro ao carregar menu: ', error));  // Exibe o erro no console, caso ocorra
+        </script>
     </header>
 
     <section id="parcerias">
