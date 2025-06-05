@@ -24,46 +24,48 @@
             .catch(error => console.error('Erro ao carregar menu: ', error));  // Exibe o erro no console, caso ocorra
     </script>
 
-    <section id="contato">
-        <div class="container">
-            <div class="row">
-                <h1 class="centroTexto">Contato</h1>
-                <form action="###########.php" method="POST" enctype="multipart/form-data">
-                    <div class="container">
-                        <h4>Digite sua mensagem:</h4>
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <label for="nome">Nome</label>
-                                <input type="text" placeholder="Nome" id="nome" name="nome" class="form-control">
-                                <br>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <label for="email">E-mail</label>
-                                <input type="email" placeholder="E-mail" id="email" class="form-control">
-                                <br>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <label for="email">Telefone</label>
-                                <input type="tel" placeholder="Telefone" id="telefone" class="form-control">
-                                <br>
-                            </div>
-                            <div class="col-12 col-md-12">
-                                <label for="observacao">Nós mande sua mensagem</label>
-                                <textarea name="observacao" id="observacao" rows="3" class="form-control"></textarea>
-                                <br>
-                            </div>
-                            <div class="col-12 col-md-12">
-                                <button type="submit" class="btn btn-primary">Enviar</button>
-                                <button type="reset" class="btn btn-secondary">Cancelar</button>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
+<section id="contato">
+  <div class="container">
+      <div class="row">
+          <div class="card contato">
+              <h1 class="centroTexto">Contato</h1>
+              <form action="###########.php" method="POST" enctype="multipart/form-data">
+                  <div class="container">
+                      <h4>Digite sua mensagem:</h4>
+                      <br>
+                      <div class="row">
+                          <div class="col-12 col-md-4">
+                              <label for="nome">Nome</label>
+                              <input type="text" placeholder="Nome" id="nome" name="nome" class="form-control">
+                              <br>
+                          </div>
+                          <div class="col-12 col-md-4">
+                              <label for="email">E-mail</label>
+                              <input type="email" placeholder="E-mail" id="email" name="email" class="form-control">
+                              <br>
+                          </div>
+                          <div class="col-12 col-md-4">
+                              <label for="telefone">Telefone</label>
+                              <input type="tel" placeholder="Telefone" id="telefone" name="telefone" class="form-control">
+                              <br>
+                          </div>
+                          <div class="col-12 col-md-12">
+                              <label for="observacao">Nos mande sua mensagem</label>
+                              <textarea name="observacao" id="observacao" rows="3" class="form-control"></textarea>
+                              <br>
+                          </div>
+                          <div class="col-12 col-md-12">
+                              <button type="submit" class="btn-outline-yellow">Enviar</button>
+                              <button type="reset" class="btn-yellow">Cancelar</button>
+                              <br>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
 
     <section id="localizacao">
         <div class="container">

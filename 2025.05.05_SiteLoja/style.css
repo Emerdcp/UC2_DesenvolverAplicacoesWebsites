@@ -404,33 +404,30 @@ footer img {
 
 /*================== TAMANHO DAS IMAGENS TELEFOEN E WHATS==================*/
 #localizacao img {
-    width: 20px; /* ou qualquer tamanho que desejar */
+    width: 30px; /* ou qualquer tamanho que desejar */
     height: auto; /* mantém a proporção */
     margin: 5px 0;
   }
   
   #contato img {
-    width: 20px; /* ou qualquer tamanho que desejar */
+    width: 3; /* ou qualquer tamanho que desejar */
     height: auto; /* mantém a proporção */
     margin: 5px 0;
   }
   
   #produtos .produtosBotao {
-    width: 20px; /* ou qualquer tamanho que você deseja */
+    width: 30px; /* ou qualquer tamanho que você deseja */
     height: auto; /* mantém a proporção */
     margin: 5px 0;
   }
   
   #quemSomos img {
-    width: 20px; /* ou qualquer tamanho que desejar */
+    width: 30px; /* ou qualquer tamanho que desejar */
     height: auto; /* mantém a proporção */
     margin: 5px 0;
   }
 
-
-
-
-/*================== PAGINA SOBRE ==================*/
+/*================== PAGINA - SOBRE ==================*/
 
   #sobre p.lead {
     font-size: 1.1rem;
@@ -439,7 +436,7 @@ footer img {
   }
   
   #sobre img {
-    max-height: 350px;
+    max-height: 250px;
     object-fit: cover;
     width: 100%;
   }
@@ -479,14 +476,20 @@ body.bg-image {
 }
 
 #blogs .logo-blog {
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 10px;
 }
 
+#blogs .logo-blogEdit {
+  width: auto;
+  height: 40%;
+  border-radius: 10px;
+}
+
 #redes img {
     width: 30px;
-    height: 30px;
+    height:auto;
     margin: 0 10px;
     transition: transform 0.3s ease;
 }
@@ -506,135 +509,164 @@ body.bg-image {
 
 
 
+/*Aplique animações ou transições suaves para melhorar a experiência do usuário*/
+/*Depois, adicione a classe .fade-in nas imagens ou seções que você deseja animar.*/
+
+/* Efeito fade-in */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
 
 
 
+/*================== OFERTAS EXCLUSIVAS ==================*/
 
+#ofertas-exclusivas {
+  padding: 40px 0;
+}
 
+#carouselOferta {
+  max-width: 100%; /* Garante que o carrossel ocupe 100% da largura disponível */
+  margin: 0 auto; /* Centraliza o carrossel */
+}
 
+#carouselOferta .carousel-inner {
+  width: 80%; /* Ajusta a largura do carrossel */
+  margin: 0 auto; /* Centraliza a área do carrossel */
+}
 
+#carouselOferta .carousel-item {
+  height: 300px; /* Ajuste o tamanho conforme necessário */
+}
 
+#carouselOferta .carousel-item img {
+  object-fit: cover; /* Faz com que a imagem cubra completamente o espaço disponível sem distorcer */
+  width: 100%;
+  height: 100%;
+}
 
+.carousel-caption {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  right: 10%;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Melhora a legibilidade do texto */
+}
 
+.carousel-control-prev, .carousel-control-next {
+  filter: brightness(0) invert(1); /* Torna os controles mais visíveis se necessário */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*================== PAGINA SOBRE ==================*/
-
-
-  #hero {
-    height: 80vh; /* Altura da seção ocupando 80% da altura da viewport */
-    background: url('imagens/hero-streetwear.jpg') no-repeat center center; /* Imagem de fundo centralizada e sem repetição */
-    background-size: cover; /* Cobre todo o espaço, ajustando a imagem proporcionalmente */
-    color: #f0f0f0; /* Cor do texto (cinza claro) */
-    display: flex; /* Usamos flexbox para centralizar o conteúdo */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    text-align: center; /* Texto alinhado ao centro */
-    position: relative; /* Para posicionar o pseudo-elemento ::before */
-    padding: 0 15px; /* Espaçamento horizontal para não encostar nas bordas */
+@media (max-width: 768px) {
+  #carouselOferta .carousel-inner {
+      width: 100%; /* Para telas menores, ocupa toda a largura */
   }
-  
-  /* Cria uma camada escura semitransparente sobre a imagem para melhorar contraste */
-  #hero::before {
-    content: ""; /* Necessário para exibir o pseudo-elemento */
-    position: absolute; /* Posiciona exatamente sobre o #hero */
-    top: 0; left: 0; right: 0; bottom: 0; /* Ocupa toda a área da seção */
-    background: rgba(0, 0, 0, 0.6); /* Fundo preto com 60% de opacidade */
-    z-index: 1; /* Fica abaixo do conteúdo real, mas acima da imagem */
+
+  #carouselOferta .carousel-item {
+      height: 250px; /* Ajuste de altura para telas pequenas */
   }
-  
-  /* Container dentro do hero recebe posição relativa para ficar acima da camada escura */
-  #hero .container {
-    position: relative; /* Para que fique acima da sombra do ::before */
-    z-index: 2; /* Garante que o conteúdo fique na frente */
-  }
-  
-  /* Estilo do título principal */
-  #hero h1 {
-    font-size: 3rem; /* Tamanho grande para destaque */
-    font-weight: 900; /* Negrito extra para impacto visual */
-    margin-bottom: 20px; /* Espaço abaixo do título */
-    color: #f2a900; /* Cor amarelo queimado para destacar */
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* Sombra no texto para melhor leitura sobre o fundo */
-  }
-  
-  /* Estilo do parágrafo líder */
-  #hero p.lead {
-    font-size: 1.5rem; /* Texto maior para destaque */
-    margin-bottom: 30px; /* Espaço abaixo do parágrafo */
-    color: #ddd; /* Cinza claro para suavidade */
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* Sombra leve para contraste */
-  }
-  
-  /* Estilo do botão principal */
-  #hero a.btn-primary {
-    background-color: #f2a900; /* Cor de fundo amarelo */
-    border-color: #f2a900; /* Mesma cor para a borda */
-    color: #1a1a1a; /* Texto escuro para contraste */
-    font-weight: 700; /* Texto em negrito */
-    padding: 12px 30px; /* Espaçamento interno maior para botão */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(242,169,0,0.6); /* Sombra amarela para dar destaque */
-  }
-  
-  /* Estilo do botão ao passar o mouse */
-  #hero a.btn-primary:hover {
-    background-color: #d18c00; /* Amarelo mais escuro */
-    border-color: #d18c00; /* Bordas acompanham a cor */
-    color: #fff; /* Texto branco para contraste */
-    box-shadow: 0 6px 12px rgba(209,140,0,0.8); /* Sombra mais forte no hover */
-  }
-  
+}
 
 
 
+/*================== COMENTARIOS ==================*/
 
+#depoimentos {
+  background-color: #f8f9fa; /* Cor de fundo suave para destacar a seção */
+  padding: 40px 0; /* Espaçamento interno superior e inferior */
+}
 
+#depoimentos h2 {
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 30px; /* Adiciona espaço abaixo do título */
+  font-size: 2rem; /* Define o tamanho da fonte do título */
+  color: #333; /* Cor escura para o título */
+}
 
+.blockquote {
+  position: relative; /* Posicionamento relativo para os pseudo-elementos de linha */
+  padding: 20px; /* Espaçamento interno para o texto */
+  background-color: #fff; /* Cor de fundo branco para o bloco de citação */
+  border-left: 5px solid #f2a900; /* Borda à esquerda para destacar a citação */
+  margin: 20px 0; /* Margem superior e inferior para espaçar os blocos */
+  font-style: italic; /* Aplica o estilo itálico ao texto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do bloco */
+  border-radius: 10px; /* Bordas arredondadas para um visual mais suave */
+  text-align: center; /* Centraliza o texto dentro do bloco */
+  transition: transform 0.3s ease; /* Transição suave para o efeito de zoom */
+}
 
+.blockquote:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do bloco quando o mouse passa por cima */
+}
 
-/* Estilos para o slideshow */
-.slideshow-promocoes {
-    position: relative;
-    width: 100%;
-    height: 300px; /* Ajuste conforme necessário */
-    overflow: hidden;
+.blockquote p {
+  font-size: 1.2rem; /* Tamanho da fonte para o texto da citação */
+  color: #555; /* Cor do texto da citação */
+  margin-bottom: 10px; /* Espaçamento abaixo do texto */
+}
+
+.blockquote-footer {
+  font-size: 1rem; /* Tamanho da fonte para o nome do autor */
+  color: #777; /* Cor do nome do autor */
+}
+
+.blockquote-footer cite {
+  font-style: normal; /* Remove o itálico do nome do autor */
+  color: #333; /* Cor do nome do autor mais forte */
+}
+
+/* Efeito de "strike" nas bordas */
+.blockquote:before,
+.blockquote:after {
+  content: ''; /* Define que o conteúdo dos pseudo-elementos será vazio */
+  position: absolute; /* Posiciona os elementos fora do fluxo normal */
+  top: -10px; /* Ajusta a linha para ficar um pouco acima do bloco */
+  left: 10px; /* Define o alinhamento à esquerda */
+  width: calc(100% - 20px); /* Faz a linha ocupar toda a largura do bloco, menos as margens */
+  height: 1px; /* Define a altura da linha como 1px (fina) */
+  background-color: #f2a900; /* Cor da linha de strike */
+  transform: rotate(4deg); /* Inclina a linha para dar o efeito de cruzado */
+}
+
+.blockquote:after {
+  top: auto; /* Não usa o valor de top, já que estamos posicionando a linha inferior */
+  bottom: -10px; /* Ajusta a linha para ficar abaixo do bloco */
+  transform: rotate(-4deg); /* Inverte a inclinação da linha para o efeito cruzado */
+}
+
+/* Estilização das colunas para layout */
+.col-md-4 {
+  margin-bottom: 20px; /* Espaço abaixo das colunas */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .blockquote {
+      font-size: 1rem; /* Reduz o tamanho da fonte em telas menores */
   }
-  
-  .slideP {
-    display: none;
-    width: 100%;
-    height: 100%;
+
+  #depoimentos h2 {
+      font-size: 1.5rem; /* Reduz o tamanho do título em telas pequenas */
   }
-  
-  .slideP img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .slideP.active {
-    display: block;
-  }
-  
+}
+
+
+
+.card.contato {
+  background: #ffffff; /* Fundo branco */
+  border: 1px solid #ddd; /* Borda cinza clara */
+  border-radius: 10px; /* Cantos arredondados */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a borda */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Sombra suave ao redor do card */
+  transition: transform 0.3s ease; /* Animação suave ao transformar */
+  display: flex;
+  text-align: left; /* Texto centralizado */
+  padding: 15px; /* Espaçamento interno */
+}
