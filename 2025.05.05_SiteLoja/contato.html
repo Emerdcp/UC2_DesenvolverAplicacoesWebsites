@@ -2,98 +2,94 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreetWear</title>
-    <link rel="icon" href="imagens/streetwearBone.webp">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreetWear</title>
+  <link rel="icon" href="imagens/streetwearBone.webp">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-<!-- <body>style="background-image: url(imagens/streetwearMarcaAgua.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: 100%;" -->
+  <!-- <body>style="background-image: url(imagens/streetwearMarcaAgua.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: 100%;" -->
 
-    <div id="menu"></div>
-    <script>
-        // Carregar o conteúdo do menu.html
-        fetch('menu.html')  // Garante que o caminho para o menu.html está correto
-            .then(response => response.text())  // Lê o conteúdo do menu.html
-            .then(data => {
-                document.getElementById('menu').innerHTML = data;  // Insere o conteúdo no div com id "menu"
-            })
-            .catch(error => console.error('Erro ao carregar menu: ', error));  // Exibe o erro no console, caso ocorra
-    </script>
+  <div id="menu"></div>
+  <script>
+    // Carregar o conteúdo do menu.html
+    fetch('menu.html')  // Garante que o caminho para o menu.html está correto
+      .then(response => response.text())  // Lê o conteúdo do menu.html
+      .then(data => {
+        document.getElementById('menu').innerHTML = data;  // Insere o conteúdo no div com id "menu"
+      })
+      .catch(error => console.error('Erro ao carregar menu: ', error));  // Exibe o erro no console, caso ocorra
+  </script>
 
-<section id="contato">
-  <div class="container">
+  <section id="contato">
+    <div class="container">
       <div class="row">
-          <div class="card contato">
-              <h1 class="centroTexto">Contato</h1>
-              <form action="###########.php" method="POST" enctype="multipart/form-data">
-                  <div class="container">
-                      <h4>Digite sua mensagem:</h4>
-                      <br>
-                      <div class="row">
-                          <div class="col-12 col-md-4">
-                              <label for="nome">Nome</label>
-                              <input type="text" placeholder="Nome" id="nome" name="nome" class="form-control">
-                              <br>
-                          </div>
-                          <div class="col-12 col-md-4">
-                              <label for="email">E-mail</label>
-                              <input type="email" placeholder="E-mail" id="email" name="email" class="form-control">
-                              <br>
-                          </div>
-                          <div class="col-12 col-md-4">
-                              <label for="telefone">Telefone</label>
-                              <input type="tel" placeholder="Telefone" id="telefone" name="telefone" class="form-control">
-                              <br>
-                          </div>
-                          <div class="col-12 col-md-12">
-                              <label for="observacao">Nos mande sua mensagem</label>
-                              <textarea name="observacao" id="observacao" rows="3" class="form-control"></textarea>
-                              <br>
-                          </div>
-                          <div class="col-12 col-md-12">
-                              <button type="submit" class="btn-outline-yellow">Enviar</button>
-                              <button type="reset" class="btn-yellow">Cancelar</button>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-              </form>
-          </div>
+        <div class="card contato">
+          <h1 class="centroTexto">Contato</h1>
+          <form action="###########.php" method="POST" enctype="multipart/form-data">
+            <div class="container">
+              <h4>Digite sua mensagem:</h4>
+              <br>
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <label for="nome">Nome</label>
+                  <input type="text" placeholder="Nome" id="nome" name="nome" class="form-control">
+                  <br>
+                </div>
+                <div class="col-12 col-md-4">
+                  <label for="email">E-mail</label>
+                  <input type="email" placeholder="E-mail" id="email" name="email" class="form-control">
+                  <br>
+                </div>
+                <div class="col-12 col-md-4">
+                  <label for="telefone">Telefone</label>
+                  <input type="tel" placeholder="Telefone" id="telefone" name="telefone" class="form-control">
+                  <br>
+                </div>
+                <div class="col-12 col-md-12">
+                  <label for="observacao">Nos mande sua mensagem</label>
+                  <textarea name="observacao" id="observacao" rows="3" class="form-control"></textarea>
+                  <br>
+                </div>
+                <div class="col-12 col-md-12">
+                  <button type="submit" class="btn-outline-yellow">Enviar</button>
+                  <button type="reset" class="btn-yellow">Cancelar</button>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
-  </div>
-</section>
+    </div>
+  </section>
 
-    <section id="localizacao">
-        <div class="container">
+  <section id="localizacao">
+    <div class="container">
+      <div class="row">
+        <div class="card contato">
           <div class="linha-topo">
-            <h2><b>Venha nos Fazer um Visita.</b></h2>
-            <!-- <a href="#home" class="botao-topo alinha-direita"><img src="imagens/topo.png" alt="Início"></a> -->
+            <h1 class="centroTexto">Venha nos Fazer um Visita.</h1>
           </div>
           <form class="container mb-4">
             <div class="row g-3">
               <div class="col-md-4">
-                <p><b>
-                    <h4>StreetWear - A Sua Loja da Moda.</h4>
-                  </b></p>
+                <p><b><h4>StreetWear a Sua Loja.</h4></b></p>
                 <p>Via Francisco Boldrini, 100</p>
                 <p>Jardim Recanto - Americana - SP</p>
                 <p><b>CEP:</b> 83.045-725</p>
-                <img src="imagens/telefone.png" alt="Telefone"> (19) 3000-0000</P>
-                <img src="imagens/telefone.png" alt="Telefone"> (19) 98108-2383</P>
-                <p><a href="https://wa.me/5519981082383" target="_blank" style="text-decoration: none; color: inherit;">
-                    <img src="imagens/whatsapp.png" alt="whatsapp" style="width: 20px; vertical-align: middle;">
-                    (19) 3000-0000
-                  </a></p>
-                <img src="imagens/emial.png" alt="E-mail"> emersoncarvalho@hotmail.com.br
+                <p><img src="imagens/telefone.png" alt="Telefone"> (19) 3000-0000</p>
+                <p><img src="imagens/telefone.png" alt="Telefone"> (19) 98108-2383</p>
+                <p><a href="https://wa.me/5519981082383" target="_blank"><img src="imagens/whatsapp.png" alt="whatsapp"> (19) 3000-0000</a></p>
+                <p><img src="imagens/emial.png" alt="E-mail"> emersoncarvalho@hotmail.com.br</p>
               </div>
-              <!-- Google Maps -->
               <div class="col-md-8">
                 <div style="margin-top: 20px;">
-                  <iframe src="https://www.google.com/maps?q=Via+Francisco+Boldrini,+100,+Jardim+Recanto,+SP&output=embed"
+                  <iframe
+                    src="https://www.google.com/maps?q=Via+Francisco+Boldrini,+100,+Jardim+Recanto,+SP&output=embed"
                     width="100%" height="320" style="border:0;" allowfullscreen loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                   </iframe>
@@ -102,28 +98,31 @@
             </div>
           </form>
         </div>
-      </section>
+      </div>
+  </section>
 
-    <hr>
-    <footer id="redes">
-        <p class="text-center">&copy; StreetWear - Todos os direitos reservados - Siga nossas redes Sociais:
-            <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="imagens/instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" style="text-decoration: none; color: inherit;"><img src="imagens/facebook.png" alt="Facebook"></a>
-        </p>
-    </footer>
-    ... <!-- Acessibilidade -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-        </div>
+  <hr>
+  <footer id="redes">
+    <p class="text-center">&copy; StreetWear - Todos os direitos reservados - Siga nossas redes Sociais:
+      <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color: inherit;"><img
+          src="imagens/instagram.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"
+        style="text-decoration: none; color: inherit;"><img src="imagens/facebook.png" alt="Facebook"></a>
+    </p>
+  </footer>
+  ... <!-- Acessibilidade -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    <script src="scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

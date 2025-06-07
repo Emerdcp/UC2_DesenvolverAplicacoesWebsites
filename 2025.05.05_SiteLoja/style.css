@@ -81,19 +81,23 @@ body {
 
 /*=================== PRODUTOS ====================*/
 .img-produtos {
-    max-width: 200px;
-    max-height: 200px;
-    height: 200px;
+    max-width: 200px; /*Tamanho da imagem*/
+    max-height: 200px;/*Tamanho da imagem*/
+    height: 200px;/*Tamanho da imagem*/
+    display: block; /*Centraliza a imagem*/
+    margin-left: auto; /*Centraliza a imagem*/
+    margin-right: auto; /*Centraliza a imagem*/
+    cursor: pointer; /* Muda o cursor ao passar sobre a imagem */
 }
 
 /** Container de controle de compra (quantidade + botões) */
 .controle-compra {
-    display: flex;                   /* Alinha em linha */
-    align-items: center;            /* Centraliza verticalmente */
-    gap: 0.5rem;                    /* Espaço entre elementos */
-    margin-top: 1rem;               /* Espaço acima */
-    justify-content: center;        /* Centraliza horizontalmente */
-    flex-wrap: wrap;                /* Quebra em telas pequenas */
+    display: flex;/* Alinha em linha */
+    align-items: center;/* Centraliza verticalmente */
+    gap: 0.5rem;/* Espaço entre elementos */
+    margin-top: 1rem;/* Espaço acima */
+    justify-content: center;/* Centraliza horizontalmente */
+    flex-wrap: wrap;/* Quebra em telas pequenas */
 }
 
 /** Rótulo do campo de quantidade */
@@ -146,6 +150,38 @@ body {
 .btn-yellow:hover {
     background-color: #d99200;
     color: #fff;
+}
+
+
+.preco-destaque {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #edecec !important;
+  background-color: #151515;
+  padding: 6px 12px;
+  border-radius: 8px;
+  /* display: inline-block; */
+  margin: 10px 0;
+}
+
+.produtos-card{
+  background: #ffffff; /*Define o fundo dos cards como branco*/
+  border: 1px solid #ddd; /*Adiciona uma borda cinza clara aos cards*/
+  border-radius: 10px; /*Arredonda os cantos do card*/
+  overflow: hidden; /*Garante que nada saia dos limites do card.*/
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Adiciona uma leve sombra para dar profundidade ao card*/
+  width: 30% !important; /*Define a largura fixa do card*/
+  transition: transform 0.3s ease; /*Cria uma transição suave para qualquer transformação (como o efeito de hover).*/
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 20px auto; /* Adiciona espaçamento entre os cards */
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 /*=================== ACERTO DE FONTES E TEXTOS ====================*/
@@ -485,7 +521,7 @@ body.bg-image {
 
 #blogs .logo-blogEdit {
   width: auto;
-  height: 40%;
+  height: 80%;
   border-radius: 10px;
 }
 
@@ -660,8 +696,21 @@ body.bg-image {
 }
 
 
+/*================== CONTATO ==================*/
 
 .card.contato {
+  background: #ffffff; /* Fundo branco */
+  border: 1px solid #ddd; /* Borda cinza clara */
+  border-radius: 10px; /* Cantos arredondados */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a borda */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Sombra suave ao redor do card */
+  transition: transform 0.3s ease; /* Animação suave ao transformar */
+  display: flex;
+  text-align: left; /* Texto centralizado */
+  padding: 15px; /* Espaçamento interno */
+}
+
+.card.localizacao {
   background: #ffffff; /* Fundo branco */
   border: 1px solid #ddd; /* Borda cinza clara */
   border-radius: 10px; /* Cantos arredondados */

@@ -63,5 +63,26 @@ function scrollCards(value) {
   container.scrollLeft += value;
 }
 
+//=============== FUNÇÃO DE BUSCA NO STE ===================
 
 
+document.getElementById('btnBusca').addEventListener('click', function () {
+  const termoBusca = document.getElementById('campoBusca').value.toLowerCase();
+  const produtos = document.querySelectorAll('.produto');
+
+  produtos.forEach(produto => {
+    const nome = produto.getAttribute('data-nome').toLowerCase();
+    if (nome.includes(termoBusca)) {
+      produto.style.display = 'block';
+    } else {
+      produto.style.display = 'none';
+    }
+  });
+});
+
+// Permitir buscar com Enter
+document.getElementById('campoBusca').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    document.getElementById('btnBusca').click();
+  }
+});
